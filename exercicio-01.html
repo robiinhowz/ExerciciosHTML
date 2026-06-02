@@ -1,47 +1,73 @@
-<!-- 
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-
-ESTE CÓDIGO POSSUI FALHAS GRAVES DE METADADOS, SEMÂNTICA, ACESSIBILIDADE E SEGURANÇA 
-
-## Checklist de Requisitos para Entrega (Pull Request):
-  - Adicionar internacionalização na tag raiz e metadados .
-  - Configurar metadados descritivos de SEO e Open Graph (Social SEO).
-  - Substituir a estrutura por elementos semânticos ( <header> , <main> , etc.).
-  - Vincular tags <label for="..."> aos respectivos inputs com IDs correspondentes.
-  - Converter o método do formulário para POST e o botão para o tipo nativo de submissão.
-  - Aplicar obrigatoriedade, e-mail sintático e o atributo para forçar exatamente 11 dígitos numéricos inteiros no telefone celular.
-
-
-
--->
-
-<html>
 <head>
-    <title>página</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport">
+
+    <meta name="description"
+        content="O Curso de Sistemas de Informação do IFF prepara profissionais com sólida fundamentação em engenharia de computação e arquitetura de desenvolvimento web.">
+
+    <title>Bacharelado em Sistemas de Informação | IFF</title>
 </head>
+
 <body>
-    <div id="cabecalho">
-        <div class="titulo">Área de Contato do Cliente</div>
-        <div class="menu">
-            <a href="#">Ajuda</a> | <a href="#">Sair</a>
-        </div>
-    </div>
 
-    <div id="corpo-da-pagina">
-        <div class="subtitulo">Envie sua mensagem para a nossa equipe de suporte backend</div>
-        
-        <form action="/enviar" method="GET">
-            Nome: <input type="text" name="nome"><br><br>
-            Email: <input type="text" name="email"><br><br>
-            Telefone Celular: <input type="text" name="celular"><br><br>
-            Mensagem: <textarea name="msg"></textarea><br><br>
-            
-            <input type="button" value="Disparar Dados">
-        </form>
-    </div>
+<header>
+    <h1>Área de Contato do Cliente</h1>
 
-    <div id="rodape">
-        Suporte Tech 2026
-    </div>
+    <nav>
+        <a href="#">Ajuda</a> |
+        <a href="#">Sair</a>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h2>Envie sua mensagem para a nossa equipe de suporte backend</h2>
+
+        <article>
+
+            <form action="/enviar" method="POST">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required minlength="3">
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required minlength="5">
+                <br><br>
+
+                <label for="celular">Telefone Celular:</label>
+                <input type="text" id="celular" name="celular" pattern="[0-9]{11}" required>
+                <br><br>
+
+                <label for="msg">Mensagem:</label>
+                <textarea id="msg" name="msg"></textarea>
+                <br><br>
+
+                <input type="submit" value="Disparar Dados">
+
+            </form>
+
+        </article>
+
+    </section>
+
+    <aside>
+        Conteúdo relacionado: suporte técnico e informações do sistema IFF.
+    </aside>
+
+</main>
+
+<footer>
+    <strong>Suporte Tech 2026</strong><br>
+    <em>Termos de Uso do Sistema do IFF</em><br>
+    <code>Assinatura técnica do sistema</code><br>
+    <time>2026</time>
+</footer>
+
 </body>
 </html>
