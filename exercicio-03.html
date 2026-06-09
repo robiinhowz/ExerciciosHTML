@@ -1,45 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <title>Grade Horária de Aulas do Módulo</title>
 </head>
 <body>
-    
-    <!-- MÓDULO 5: HORÁRIOS DAS AULAS (PRECISA DE TABELA SEMÂNTICA) -->
-    <div class="bloco-cronograma">
-        <h2 class="titulo-seccao">Horários acadêmicos</h2>
+
+    <!-- MÓDULO 5: HORÁRIOS DAS AULAS -->
+    <section class="bloco-cronograma">
+        <h2 class="titulo-seccao">Horários Académicos</h2>
+
         <table border="1">
-            <tr>
-                <td>Aula</td>
-                <td>Horário</td>
-            </tr>
-            <tr>
-                <td>Estruturação Multimídia</td>
-                <td>19:00 - 20:30</td>
-            </tr>
+            <caption>Horário das aulas do módulo</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Aula</th>
+                    <th scope="col">Horário</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Estruturação Multimídia</td>
+                    <td>19:00 - 20:30</td>
+                </tr>
+            </tbody>
         </table>
-        
+
         <p>Recursos necessários:</p>
-        <!-- Deve ser refatorado para uma lista não ordenada estruturada -->
-        * Computador com IDE configurada<br>
-        * Arquivos de legenda (.vtt) prontos
-    </div>
+        <ul>
+            <li>Computador com IDE configurada</li>
+            <li>Arquivos de legenda (.vtt) prontos</li>
+        </ul>
+    </section>
 
     <hr>
 
-    <!-- MÓDULO 6: CONTEÚDO INTEGRADO (PRECISA DE ACESSIBILIDADE E SEGURANÇA) -->
-    <div class="bloco-video">
+    <!-- MÓDULO 6: CONTEÚDO INTEGRADO -->
+    <section class="bloco-video">
         <h2>Apresentação da Disciplina</h2>
-        <!-- Falta controle de vídeo e acessibilidade de legendas -->
-        <video src="apresentacao.mp4"></video>
-    </div>
 
-    <div class="bloco-mapa">
+        <video controls width="640">
+            <source src="apresentacao.mp4" type="video/mp4">
+
+            <track
+                kind="captions"
+                src="legendas.vtt"
+                srclang="pt"
+                label="Português"
+                default>
+
+            O seu navegador não suporta o elemento de vídeo.
+        </video>
+
+        <p>Vídeo demonstrativo</p>
+    </section>
+
+    <section class="bloco-mapa">
         <h2>Localização do Campus IFF</h2>
-        <!-- Falta sandbox de segurança e título descritivo acessível -->
-        <iframe src="https://mapas.iff.edu.br"></iframe>
-    </div>
+
+        <iframe
+            src="https://mapas.iff.edu.br"
+            title="Mapa de localização do Campus IFF"
+            sandbox="allow-scripts allow-same-origin"
+            width="600"
+            height="450">
+        </iframe>
+    </section>
 
 </body>
 </html>
