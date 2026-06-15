@@ -1,21 +1,36 @@
-<!-- EXERCÍCIO: APLIQUE METADADOS, SEMÂNTICA DE IMAGEM RESPONSIVA E TEXTO INLINE -->
-<html>
-<head>
-    <title>galeria</title>
-</head>
-<body>
-    <div id="noticia-bsi">
+<!DOCTYPE html>
+<HTML língua="pt-BR">
+<cabeça>
+    <meta conjunto de caracteres="UTF-8">
+    <meta nome="janela de visualização" conteúdo="largura=largura do dispositivo, escala inicial=1,0">
+    <título>Inauguração do Laboratório de Hardware do IFF</título>
+</caboça>
+<corpo>
+    <dividir id="noticia-bsi">
         <h1>Inauguração do Laboratório de Hardware do IFF</h1>
-        <p>Postado em: 01/06/2026 por Professor Ronaldo Amaral</p>
-
-        <!-- TAREFA: Refatorar este bloco de imagem desatualizado para usar o elemento <picture> moderno -->
-        <!-- Envolva a imagem e sua legenda com as tags semânticas de ilustração corretas -->
-        <img src="banner-servidor.jpg" width="1200" height="800" alt="foto">
-        <p class="legenda-foto">Foto do novo rack de servidores instalados no Laboratório do IFF.</p>
-
-        <p>A equipe técnica do IFF concluiu a infraestrutura de rede local. Para iniciar a auditoria, abra o terminal de linha de comando no seu computador e execute: <b>ping bsi.iff.edu.br</b>.</p>
         
-        <p><i>Atenção:</i> Este procedimento é altamente recomendado para todos os alunos matriculados na disciplina de <i>Programação Web</i>.</p>
-    </div>
-</body>
+        
+        <p>Postado em: <tempo dados e hora="01/06/2026">01/06/2026</tempo> pelo Professor Ronaldo Amaral</p>
+
+        <figura>
+            <imagem>
+              
+                <fonte conjunto de origem="banner-desktop.avif" mídia="(largura mínima: 1024px)" tipo="imagem/avif">
+              
+                <fonte conjunto de origem="banner-mobile.webp" mídia="(largura máxima: 1023px)" tipo="imagem/webp">
+                
+              
+                <imagem fonte="banner-servidor.jpg" alt="Novo rack de servidores instalados no Laboratório do IFF" carregando="preguiçoso">
+            </imagem>
+            <legenda de figo>Foto do novo rack de servidores instalados no Laboratório do IFF.</legenda de figo>
+        </figura>
+
+    
+        <p>Um equipamento técnico do IFF concluiu uma infraestrutura de rede local. 
+        Para iniciar a auditoria, abra o terminal de linha de comando no seu computador e executar: 
+        <código>ping bsi.iff.edu.br</código>.</p>
+        
+        <p><forte>Atenção:</forte> Este procedimento é altamente recomendado para todos os alunos matriculados na disciplina de <em>Programação Web</em>.</p>
+    </dividir>
+</corpo>
 </html>
