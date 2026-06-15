@@ -1,0 +1,87 @@
+<!--
+ - Variáveis e Reset Básico:
+    Criar variáveis na pseudo-classe :root para padronizar as cores: uma cor primária (ex: #2563eb), cor de fundo (#f3f4f6), cor do texto (#1f2937) e cor da sidebar (#111827).
+    Fazer o reset básico: margin: 0; padding: 0; box-sizing: border-box;.
+
+- O Layout Principal (CSS Grid):
+    Transformar a classe .layout-grid em um container Grid.
+    Configurar duas colunas: a primeira (sidebar) com 250px fixos e a segunda (conteúdo principal) ocupando o restante do espaço (1fr).
+    Fazer com que a altura do layout ocupe 100% da tela (min-height: 100vh).
+
+- Estilização da Sidebar e Cabeçalho:
+    Aplicar as variáveis de cor para o fundo da .sidebar e para o texto.
+    Usar Flexbox no .cabecalho-main para alinhar o título (<h1>) à esquerda e o botão (.btn-novo) à direita, centralizando-os verticalmente (align-items: center; justify-content: space-between;).
+
+- Grid de Usuários (CSS Grid ou Flexbox Wrap):
+    Configurar a .grid-usuarios para exibir os cards lado a lado.
+    Usar display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;. Isso fará com que os cards se adaptem automaticamente à largura disponível.
+
+- Componente de Card (Flexbox):
+    Estilizar o .card-usuario com fundo branco, bordas arredondadas e uma sombra suave (box-shadow).
+    Usar Flexbox dentro do card para alinhar o .avatar ao lado da .info (display: flex; align-items: center; gap: 15px;).
+
+- Responsividade (Media Queries):
+    Criar uma @media query para telas menores que 768px.
+    Nesse breakpoint, alterar o .layout-grid para ter apenas 1 coluna, empilhando a sidebar acima do conteúdo principal ou escondendo a sidebar em um menu hambúrguer (desafio avançado).
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Gestão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="layout-grid">
+        <aside class="sidebar">
+            <h2>AdminPanel</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Usuários</a></li>
+                    <li><a href="#">Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="conteudo-principal">
+            <header class="cabecalho-main">
+                <h1>Gestão de Usuários</h1>
+                <button class="btn-novo">Novo Usuário</button>
+            </header>
+
+            <section class="grid-usuarios">
+                <article class="card-usuario">
+                    <div class="avatar">A</div>
+                    <div class="info">
+                        <h3>Alice Souza</h3>
+                        <p>alice@email.com</p>
+                    </div>
+                </article>
+
+                <article class="card-usuario">
+                    <div class="avatar">B</div>
+                    <div class="info">
+                        <h3>Bruno Lima</h3>
+                        <p>bruno@email.com</p>
+                    </div>
+                </article>
+
+                <article class="card-usuario">
+                    <div class="avatar">C</div>
+                    <div class="info">
+                        <h3>Carlos Mendes</h3>
+                        <p>carlos@email.com</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
